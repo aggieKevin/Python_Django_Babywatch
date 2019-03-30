@@ -1,0 +1,327 @@
+<html>
+
+<head>
+
+  <title>Update Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="play-date, baby date, baby, babies, play date, baby event, children, child, children date" />
+  <meta name="description" content="Online application for setting up play dates for children upto the age of 6" />
+  <meta name="author" content="Team 29">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+   crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/Update.js">
+    
+  </script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+   crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/Team29_Update.css" />
+  <link rel="shortcut icon" type="image/png" href="images/Flappy-logo.png" />
+
+</head>
+
+<body>
+	<nav class="navbar sticky-top navbar-expand-sm">
+    <a href="home.htm">
+      <img src="images/Babywatch_Logo_2.png" class="navbar-brand"></img>
+    </a>
+
+    
+    <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar4">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="collapsingNavbar4">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.htm">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Browse.html">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Profile
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Update_Profile.html">Update Profile</a>
+                <a class="dropdown-item" href="#">Notifications</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#register">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+    <div id="nav">
+      <ul>
+        <li><a href="#" id="preflink" onclick="myFunction(this.id)">Update Preferences</a></li>
+        <li><a href="#" id="contactlink" onclick="myFunction(this.id)">Update Contact Details</a></li>
+        <li><a href="#" id="childlink" onclick="myFunction(this.id)">Update Children Details</a></li>
+        <li><a href="#" id="passlink" onclick="myFunction(this.id)">Change your Password</a></li>
+      </ul>
+    </div>
+    <br>
+    <div id="preferences">
+          
+      <div class="container container-small">
+
+      <div class="md-form mt-0">
+        <br>
+        <div id="form-id">
+        
+        <h4 class="font-weight-bold">Update your time preference</h4>
+        
+        <div id="gender-form"> 
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Morning" readonly>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Afternoon" readonly>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Evening" readonly>
+          </div>
+
+        </div>
+
+            <br>
+
+        <h4 class="font-weight-bold">Update your day preference</h4>
+        
+        <div id="gender-form"> 
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Weekdays" readonly>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input class="form-control" type="text" placeholder="Weekends" readonly>
+          </div>
+
+        </div>
+        
+        <br>
+        <input type="submit" class="btn btn-primary" id="Submit-button" value="Submit">
+      </div>
+      
+      
+      </div>
+    </div>
+    </div>
+
+    <div id="contact">
+      <div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="images\Default_Avatar.png" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+    
+      <div class="container container-small">
+
+      <div class="md-form mt-0">
+        <br>
+        <h4 class="font-weight-bold">Update your address</h4>
+        <div class="form-group">
+          <label for="inputAddress">Address Line 1</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address Line 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div>
+          <label for="phone">Phone number:</label>
+
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+          <span class="note">   Format: 123-456-7890</span>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" id="Submit-button" value="Submit">
+      </div>
+      
+      
+      </div>
+      </div>
+    </div>
+
+    <div id="child">
+      <div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="images\Default_Avatar.png" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+    
+      <div class="container container-small">
+
+      <div class="md-form mt-0">
+        <br>
+        <h4 class="font-weight-bold">Child Details</h4>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Smith">
+        </div>
+        <div class="input-group mb-3" id="gender-form">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Select Age</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="selected">3</option>
+            <option value="1">3</option>
+            <option value="2">4</option>
+            <option value="3">5</option>
+            <option value="3">6</option>
+            <option value="3">7</option>
+            <option value="3">8</option>
+          </select>
+
+
+        </div>
+        <div class="input-group mb-3" id="gender-form">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Select Gender</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="selected">Male</option>
+            <option value="1">Female</option>
+            <option value="2">Other</option>
+
+          </select>
+
+          
+        </div>
+
+        <div class="form-group">
+          <label for="forAllergyComment">Allergies:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="forHobbyComment">Hobbies:</label>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+
+              <br>
+        <input type="submit" class="btn btn-primary" id="Submit-button" value="Submit">
+      </div>
+      
+      
+      </div>
+      </div>
+    </div>
+
+    <div id="pass">
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Confirm password:</label>
+            <div class="col-md-8">
+              <input class="form-control" type="password">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <input type="submit" class="btn btn-primary" id="Submit-button" value="Submit">
+              <span></span>
+              <input type="reset" class="btn btn-default" value="Cancel">
+            </div>
+          </div>
+
+        
+    </div>
+      
+      
+      </div>
+      </div>
+    </div>
+
+    </div>
+      
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>

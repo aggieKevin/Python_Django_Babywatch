@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Login</title>
+{% endblock%}
+
+{% block body%}
+<div class="container", style="width:350px">
+    </br>
+<div class='card'>
+    <div class='card-header'><h2>You can log in here</h2>
+    <p>Not registered with us yet? <a href="/main/register/">Sign up</a> </p>  </div>
+    <div class='card-body'>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p><a href="/main/register/">Forgot your password?</a> </p>  
+        <button bype="submit">Login</button>
+    </form>
+    </div>
+</div>
+</br>
+</div>
+{% endblock %}
+
+
+
