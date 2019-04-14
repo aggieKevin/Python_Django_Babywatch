@@ -1,4 +1,4 @@
-﻿.container-fluid {
+.container-fluid {
 	font-size: 1.25rem;
 	font-weight: 300;
 }
@@ -57,7 +57,7 @@ header {
 }
 
 .carousel-img {
-	width: 50%; /* assigned to shrink the image size to 50% of its original size */ 
+	width: 50%; /* assigned to shrink the image size to 50% of its original size */
 	height: auto;
 }
 
@@ -67,7 +67,7 @@ header {
 	height: auto;
 	margin: 0 auto;
 	text-align: right;
-	opacity: .7; /* opacity of carousel images set to 70% of their original image opacity. This makes them transparent enough to 
+	opacity: .7; /* opacity of carousel images set to 70% of their original image opacity. This makes them transparent enough to
 	be contrasted nicely with the mascot  */
 	position: relative;
 }
@@ -100,7 +100,7 @@ header {
 	padding: 15px 32px;
 	border: 1px solid #000000;
     border-radius: 25px;
-	
+
 	text-align:center;
 	background-color:#00CFF0;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -111,11 +111,11 @@ header {
     letter-spacing: 0;
     padding: 7px 20px;
     text-transform: uppercase;
-	
+
 }
 .btn-pop-up:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  
+
 }
 .btn-pop-up-1:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -141,10 +141,10 @@ header {
 }
 
 #popupimg{
-	
+
 	text-align: center;
-	
-}	
+
+}
 /* properties of image (BabyWatch icon) in the navigation bar */
 /*.img-left {
 	float: left;
@@ -167,12 +167,12 @@ header {
 
 .nav-link:hover {
 	color: #00cff0; /* The color of the navigation links changes from grey to blue on hover. This brings contrast for better user
-	experience. Also, aligns with the color themes of the website */ 
+	experience. Also, aligns with the color themes of the website */
 	font-weight: 600;
 }
 /* The footer of the website has some of the navigation links again, in case users need to go back to home page or search for something.
-In the footer we don't change the color to blue on hover, unlike in the top navigation bar. On hover functionality is not feasible for 
-mobile devices as there is no mouse. Footer also has links to our social media pages which is responsive for different device widths. We have also included 
+In the footer we don't change the color to blue on hover, unlike in the top navigation bar. On hover functionality is not feasible for
+mobile devices as there is no mouse. Footer also has links to our social media pages which is responsive for different device widths. We have also included
 team name (author) information and cited references for the images or icons */
 footer {
 	background-color: #ffcfda;
@@ -231,6 +231,31 @@ footer p {
 	margin: 0;
 }
 
+
+/*This part of CSS is for the Logout Page*/
+
+.logout-page-box{
+    float: center;
+    text-align:center;
+    padding-left:100px;
+}
+
+.log-out-page-header{
+    display: block;
+	position: relative;
+	text-align:center;
+	/*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif*/;
+	font-family: "Comic Sans";
+}
+
+#logout-img{
+    float:center;
+    text-align:center;
+}
+/*CSS for the logout page ends here*/
+
+
+
 /*This part of CSS is for search result profile page to work*/
 .aboutus-section {
     padding: 2% 0;
@@ -266,8 +291,8 @@ footer p {
 #button{
 	padding:10%;
 	position:static;
-	
-	
+
+
 }
 a:hover, a:active {
 
@@ -277,7 +302,7 @@ a:hover, a:active {
 .aboutus-more {
     border: 1px solid #000000;
     border-radius: 25px;
-	
+
 	text-align:center;
 	background-color:#00CFF0;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -355,7 +380,7 @@ a:hover, a:active {
 
 /*FAQ Page Only*/
 #FAQh2{
-	font-family: Palatino Linotype, Book Antiqua, Palatino, serif;	
+	font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 	text-align:center
 }
 
@@ -368,7 +393,7 @@ a:hover, a:active {
 	background-color: #f8f8f8;
 	color: #000000;
 	border: solid #f8f8f8 15px;
-	
+
 }
 .panel-body{
 	font-size:0.8rem;
@@ -403,7 +428,7 @@ a:hover, a:active {
 }
 .accordion-section .panel-default .panel-body {
     font-size: 1.2rem;
-	
+
 }
 */
 /*FAQ Page end*/
@@ -442,8 +467,8 @@ a:hover, a:active {
 	.custom-toggler.navbar-toggler {
 		border-color:#b22222;
 	}
-	
-	/* Overriding the below class from Bootstrap 4 to align with our requirement. This class corresponds to the button icon (3 horizontal 
+
+	/* Overriding the below class from Bootstrap 4 to align with our requirement. This class corresponds to the button icon (3 horizontal
 	lines) which is used to expand the navigation bar on mobile devices. Overriding the color code to 'firebrick' */
 	.custom-toggler .navbar-toggler-icon {
 		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(178, 34, 34, 0.7)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");

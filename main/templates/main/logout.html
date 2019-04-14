@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Logout</title>
+{% endblock%}
+
+{% block body %}
+
+<div class="container",style="max-width:450px">
+<div class='logout-page-box'>
+    <div class='log-out-page-header'>
+        <h2>Flappy is sad to see you go!</h2>
+        <img id="logout-img" src="{% static 'main/images/flappy_sad.jpg' %}"></img>
+        <p id="logout-text">Do you want to find another playdate?  <a href="/main/login/">Login</a> </p>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

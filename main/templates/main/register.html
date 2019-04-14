@@ -1,0 +1,219 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block body %}
+<div class="container", style="width:400px">
+</br>
+    <div class='card'>
+            <div class='card-header'><h2 id="login-header">You can register here</h2></div>
+            <div style="float:center;" class='card-body'>
+                    <form method="post" onsubmit="if(!(document.getElementById('user-agree').checked && document.getElementById('user-bg-check').checked)) {alert('Please accept terms and conditions');} return document.getElementById('user-agree').checked && document.getElementById('user-bg-check').checked">
+                        <div style="font-size:1.0rem">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                        </div>
+                            <div class="user-agree">
+                            <hr>
+                            <!--Checkbox for Policy-->
+                            <p class="register-welcome-text-1" style="font-size:0.8rem;">
+                              <input id="user-agree" type="checkbox" name="UA"> I acknowledge that I have read and accepted the <a href="#bannerformmodal" data-toggle="modal" data-target="#bannerformmodal">Terms and Conditions</a> and, the <a href="#bannerformmodal1" data-toggle="modal" data-target="#bannerformmodal1">Privacy Policy</a> of BabyWatch before creating the account
+
+                    <!-- The Modal for Alert -->
+					<div id="alertwindow" style="display:none;">
+                        You need to accept terms and conditions
+					</div>
+
+    				<!-- The Modal for Terms and Conditions -->
+					<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+
+						  <!-- Modal Header -->
+						  <div class="modal-header">
+							<h4 style="text-align:center" class="modal-title"></h4>
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						  </div>
+
+                            <!-- Modal body -->
+						  <div class="modal-body">
+							<h4 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Welcome to BabyWatch</h4>
+							<p class="register-welcome-text-1">
+	<p class="register-welcome-text-1">These terms and conditions outline the rules and regulations for the use of BabyWatch's Website.</p>
+	<p class="register-welcome-text-1" style="text-transform: capitalize;"> BabyWatch is located at:</p>
+	<p class="register-welcome-text-1" style="font-size:0.9rem;">400 Bizzell St College Station, College Station <br/>77843 - Texas , United States<br/>
+	</p>
+
+	<p class="register-welcome-text-1">By accessing this website we assume you accept these terms and conditions in full. Do not continue to use BabyWatch's website
+	if you do not accept all of the terms and conditions stated on this page.</p>
+
+	<p class="register-welcome-text-1">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice
+	and any or all Agreements: “Client”, “You” and “Your” refers to you, the person accessing this website
+	and accepting the Company’s terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers
+	to our Company. “Party”, “Parties”, or “Us”, refers to both the Client and ourselves, or either the Client
+	or ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake
+	the process of our assistance to the Client in the most appropriate manner, whether by formal meetings
+	of a fixed duration, or any other means, for the express purpose of meeting the Client’s needs in respect
+	of provision of the Company’s stated services/products, in accordance with and subject to, prevailing law
+	of United States. Any use of the above terminology or other words in the singular, plural,
+	capitalisation and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
+
+	<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Cookies</h6>
+
+	<p class="register-welcome-text-1">We employ the use of cookies. By using BabyWatch's website you consent to the use of cookies
+	in accordance with BabyWatch’s privacy policy.</p>
+
+	            <p class="register-welcome-text-1">Most of the modern day interactive web sites
+	use cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site
+	to enable the functionality of this area and ease of use for those people visiting. Some of our
+	affiliate / advertising partners may also use cookies.</p>
+	                <h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">License</h6>
+	                    <p class="register-welcome-text-1">Unless otherwise stated, BabyWatch and/or it’s licensors own the intellectual property rights for
+	all material on BabyWatch. All intellectual property rights are reserved. You may view and/or print
+	pages from http://babywatch.pythonanywhere.com for your own personal use subject to restrictions set in these terms and conditions.</p>
+
+							</p>
+						  </div>
+
+
+						  <!-- Modal footer -->
+						  <div class="modal-footer">
+							<button style = "font-family:Palatino Linotype,Book Antiqua, Palatino, serif" type="button" class="btn btn-danger" data-dismiss="modal">I Agree and Accept</button>
+						  </div>
+
+						</div>
+					  </div>
+					</div>
+
+
+
+					<!-- The Modal for Privacy Policy -->
+					<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal1" aria-hidden="true" id="bannerformmodal1">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+
+						  <!-- Modal Header -->
+						  <div class="modal-header">
+							<h4 style="text-align:center" class="modal-title"></h4>
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						  </div>
+
+
+						    <!-- Modal body -->
+						  <div class="modal-body">
+							<h4 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Welcome to our Privacy Policy</h4>
+							<p class="register-welcome-text-1">
+	                		<h5 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Your privacy is critically important to us.</h5>
+			<p class="register-welcome-text-1">BabyWatch is located at:</p>
+			<address style="font-size:0.9rem;">
+			  BabyWatch<br/>400 Bizzel Street, College Station <br />77843 - Texas , United States 9664111201</address>
+
+			<p class="register-welcome-text-1">BabyWatch is a social website where families get to connect with each other. To make this possible, BabyWatch collects some amount of information from the users and their family. It is BabyWatch’s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to <a href="http://babywatch.pythonanywhere.com">babywatch.pythonanywhere.com</a> (hereinafter, "us", "we", or "babywatch.pythonanywhere.com"). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy ("Privacy Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.</p>
+			<p class="register-welcome-text-1">This Privacy Policy, together with the Terms and conditions posted on our Website, set forth the general rules and policies governing your use of our Website. Depending on your activities when visiting our Website, you may be required to agree to additional terms and conditions.</p>
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Website Visitors</h6>
+			<p class="register-welcome-text-1">Like most website operators, BabyWatch collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. BabyWatch’s purpose in collecting non-personally identifying information is to better understand how BabyWatch’s visitors use its website. From time to time, BabyWatch may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.</p>
+			<p class="register-welcome-text-1">BabyWatch also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on http://babywatch.pythonanywhere.com. BabyWatch only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below.</p>
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Gathering of Personally-Identifying Information</h6>
+		    <p class="register-welcome-text-1">All BabyWatch visitors choose BabyWatch’s websites to interact with other users in ways that require BabyWatch to gather personally-identifying information. The amount and type of information that BabyWatch gathers depends on the nature of the interaction. For example, we ask visitors who sign up at http://babywatch.pythonanywhere.com to provide a username, email address, address, phone number, telephone number, verification ID, etc. Other users in the system will be able to view the basic information such as: Name, Address, Phone Number, Family details, etc. Information like usernames, passwords, verification ID, birthdate, etc. will be extremely secured and will not be shared with other users. BabyWatch uses this information to conduct background checks on all its users. This is to ensure paramount safety of the users. BabyWatch will only store this information as long as you are an active user. All information will be deleted from our servers and database immediately should you chose to delete your account. You may terminate your account at any time.</p>
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Security</h6>
+			<p class="register-welcome-text-1">The security of your and your child's Personal Information is paramount to us. We strive to ensure that these details remain protected. We have technical solutions at our end which prevents any one from accessing information related to children. We conduct background checks on all users to ensure safety of you and your family</p>
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Links To External Sites</h6>
+			<p class="register-welcome-text-1">Our Service may contain links to external sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy and terms and conditions of every site you visit.</p>
+			<p class="register-welcome-text-1">We have no control over, and assume no responsibility for the content, privacy policies or practices of any third party sites, products or services.</p>
+
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Protection of Certain Personally-Identifying Information</h6>
+			<p class="register-welcome-text-1">BabyWatch discloses potentially personally-identifying and personally-identifying information only to those of its employees, contractors and affiliated organizations that (i) need to know that information in order to process it on BabyWatch’s behalf or to provide services available at BabyWatch’s website, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors and affiliated organizations may be located outside of your home country; by using BabyWatch’s website, you consent to the transfer of such information to them. BabyWatch will not rent or sell potentially personally-identifying and personally-identifying information to anyone. Other than to its employees, contractors and affiliated organizations, as described above, BabyWatch discloses potentially personally-identifying and personally-identifying information only in response to a subpoena, court order or other governmental request, or when BabyWatch believes in good faith that disclosure is reasonably necessary to protect the property or rights of BabyWatch, third parties or the public at large.</p>
+			<p class="register-welcome-text-1">If you are a registered user of http://babywatch.pythonanywhere.com and have supplied your email address, BabyWatch may occasionally send you an email to tell you about new features, solicit your feedback, or just keep you up to date with what’s going on with BabyWatch and our products. We primarily use our website to communicate this type of information, so we expect to keep this type of email to a minimum. If you send us a request (for example via a support email or via one of our feedback mechanisms), we reserve the right to publish it in order to help us clarify or respond to your request or to help us support other users. BabyWatch takes all measures reasonably necessary to protect against the unauthorized access, use, alteration or destruction of potentially personally-identifying and personally-identifying information.</p>
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Aggregated Statistics</h6>
+			<p class="register-welcome-text-1">BabyWatch may collect statistics about the behavior of visitors to its website. BabyWatch may display this information publicly or provide it to others. However, BabyWatch does not disclose your personally-identifying information.</p>
+
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Cookies</h6>
+			<p class="register-welcome-text-1">To enrich and perfect your online experience, BabyWatch uses "Cookies", similar technologies and services provided by others to display personalized content, appropriate advertising and store your preferences on your computer.</p>
+			<p class="register-welcome-text-1">A cookie is a string of information that a website stores on a visitor’s computer, and that the visitor’s browser provides to the website each time the visitor returns. BabyWatch uses cookies to help BabyWatch identify and track visitors, their usage of http://babywatch.pythonanywhere.com, and their website access preferences. BabyWatch visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using BabyWatch’s websites, with the drawback that certain features of BabyWatch’s websites may not function properly without the aid of cookies.</p>
+			<p class="register-welcome-text-1">By continuing to navigate our website without changing your cookie settings, you hereby acknowledge and agree to BabyWatch's use of cookies.</p>
+
+
+
+						<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Privacy Policy Changes</h6>
+			<p class="register-welcome-text-1">Although most changes are likely to be minor, BabyWatch may change its Privacy Policy from time to time, and in BabyWatch’s sole discretion. BabyWatch encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.</p>
+
+
+
+			  <h6></h6>
+			  	<p></p>
+
+			<h6 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Credit & Contact Information</h6>
+							<p class="register-welcome-text-1">This privacy policy was created at <a style="color:inherit;text-decoration:none;" href="https://termsandconditionstemplate.com/privacy-policy-generator/" title="Privacy policy template generator" target="_blank">termsandconditionstemplate.com</a>. If you have any questions about this Privacy Policy, please contact us via <a href="mailto:">email</a> or <a href="tel:9664111202">phone</a>.</p>
+
+							</p>
+						  </div>
+
+
+						  <!-- Modal footer -->
+						  <div class="modal-footer">
+							<button style = "font-family:Palatino Linotype,Book Antiqua, Palatino, serif" type="button" class="btn btn-danger" data-dismiss="modal" onclick="document.getElementById('user-agree').checked = true"> I Agree and Accept</button>
+						  </div>
+
+						</div>
+					  </div>
+					</div>
+                    </p>
+        <!--Modal for Policy Ends here-->
+        <!--Checkbox for Background Check-->
+                    <p class="register-welcome-text-1" style="font-size:0.8rem">
+                        <input id="user-bg-check" type="checkbox" name="UA" onchange="document.getElementById('login-submit-button').disabled = !this.checked && !document.getElementById('user-agree').checked;">
+                        I have read and understood the <a href="#bannerformmodal2" data-toggle="modal" data-target="#bannerformmodal2">Background Check Policy</a> and hereby authorize BabyWatch to go ahead with the same. <br><br>
+
+
+		<!-- The Modal for Background Check -->
+					<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal2" aria-hidden="true" id="bannerformmodal2">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+
+						  <!-- Modal Header -->
+						  <div class="modal-header">
+							<h4 style="text-align:center" class="modal-title"></h4>
+
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						  </div>
+
+
+						    <!-- Modal body -->
+						  <div class="modal-body">
+							<h4 style="text-align:center;font-family:Palatino Linotype,Book Antiqua,Palatino,serif">Background Check Authorization</h4><br/>
+
+			<p class="register-welcome-text-1">BabyWatch is a social website where families get to connect with each other. Users shall henceforth use this website to find playdates for their children. To make this possible, BabyWatch collects some amount of information from the users and their family which includes but is not limited to: Name, Address, Age, Gender, Employment Informtion, Verified Government Identification, etc. </p>
+			<p class="register-welcome-text-1">BabyWatch wants the best for your children, just like you. Therefore, after our registration process, we conduct a background check on all our users and only verified users can see any information related to you and your children</p>
+            <p class="register-welcome-text-1">Please read our policy and authorize your consent below:</p>
+            <p class="register-welcome-text-1"> By registering for this website, I am confirming that I am a legal adult who has/(or is a legal guardian to) at least one child. I will solely use this website to find and connect with other families around me. All information provided by me is accurate to my knowledge. I, hereby authorize, BabyWatch to employ a third-party app to conduct a background check on me. I will not get access to system functionality until I clear the checks. BabyWatch has all rights to terminate my account indefinitely should I fail the background check process.</p>
+            <p class="register-welcome-text-1"> Once I clear the background check, I will be able to view information pertaining to other users. I will not use information of other users to harm or abuse them in any way. If found doing so, it will not only place a ban on my account, but also allow BabyWatch and other users to file complaints against me. </p>
+
+						  </div>
+
+
+						  <!-- Modal footer -->
+						  <div class="modal-footer">
+							<button style = "font-family:Palatino Linotype,Book Antiqua, Palatino, serif" type="button" class="btn btn-danger" data-dismiss="modal" onclick="document.getElementById('user-bg-check').checked = true"> I Authorize</button>
+						  </div>
+
+						</div>
+					  </div>
+					</div>
+            <!--Modal for Background Check Ends here-->
+
+                    </p>
+                            </div>
+                            <div style="text-align:center;float:center"><button id="login-submit-button" type="submit">Submit</button></div>
+                    </form>
+            </div>
+    </div>
+</br>
+</div>
+{%  endblock %}

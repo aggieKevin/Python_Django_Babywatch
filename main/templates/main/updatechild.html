@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+<title>Profile</title>
+{% endblock%}
+
+{% block body%}
+
+        <!--<ul class="navbar-nav ml-auto">-->
+        <div id="nav">
+            <ul>
+                <li><a href="/main/updateprofile/">Household</a></li>
+                <li><a href="/main/updateguardian/">Guardian</a></li>
+                <li id="current-selected"><a href="/main/updatechild/">Children</a></li>
+            </ul>
+        </div>
+
+
+<div class="container">
+{% for form, name in forms %}
+<!--child {{name}}-->
+<br>
+    <div class="card profile-block" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel panel-default">
+		<div class="panel-heading p-3" role="tab" id="heading0">
+		    <div class='card-header'>
+		        <h5><a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{forloop.counter}}" aria-expanded="true" aria-controls="collapse0">
+			Click to edit your child's information
+			</a></h5>
+		    </div>
+		</div>
+		<div id="collapse-{{forloop.counter}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+			<div class='card-body'>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-7 col-form-label cap"> {{ field.label }} </label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" value="{{ field.value }}">
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+                <button type="submit" name={{name}} value={{name}} class="button" id="register-submit-button"> SAVE</button>
+            </form>
+            </div>
+
+
+		</div>
+	</div>
+    </div>
+    <!--div class='card profile-block'>
+        <div class='card-header'><h5>Your Child information</h5></div>
+        <div class='card-body'>
+            <form method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div >
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-4 col-form-label"> {{ field.html_name }} </label>
+                        <br>
+                        <div class="col-2 cap">
+                            {{ field }}
+                        </div>
+                    </div>
+                </div>
+                <!--div>
+                   <!-- <label for="{{ field.id_for_label }}" > {{ field.html_name }} </label>
+                    <div class="form-group"> {{ field.html_name }} </div>
+                    <br>
+                    <div class="form-control" id="exampleInputEmail1"> {{ field }} </div>
+                </div>
+                {% endfor %}
+                <button type="submit" name={{name}} value={{name}} class="button" id="register-submit-button"> SAVE</button>
+            </form>
+        </div>
+        </div>
+    </div-->
+</div>
+{% endfor %}
+{% endblock %}

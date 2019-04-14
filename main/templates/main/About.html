@@ -1,169 +1,115 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html'%}
+{% load static %}
 
-<head>
+{% block head %}
+<title>About BabyWatch</title>
+{% endblock%}
 
-	<title>BabyWatch</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="keywords" content="play-date, baby date, baby, babies, play date, baby event, children, child, children date" />
-	<meta name="description" content="Online application for setting up play dates for children upto the age of 8" />
-	<meta name="author" content="Team 29">
+{% block body%}
+<div class="container">
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-	 crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-	 crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/Team29.css" />
-	<link rel="shortcut icon" type="image/png" href="images/Flappy-logo.png" />
-
-
-</head>
-
-<body>
-
-	<nav class="navbar sticky-top navbar-expand-sm">
-		<a href="home.htm">
-			<img src="images/Babywatch_Logo_2.png" class="navbar-brand"></img>
-		</a>
-
-		
-		<button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar4">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="navbar-collapse collapse" id="collapsingNavbar4">
-
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="home.htm">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="Browse.html">Search</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="About.html">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#login">My Profile</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#register">Logout</a>
-				</li>
-			</ul>
+	<h1 id="FAQh2">Frequently Asked Questions </h1>
+	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+			What is Babywatch?
+			</a>
+		</h3>
 		</div>
-	</nav>
-
-
-  <div class="container">
-  
-	  <h1 id="FAQh2">Frequently Asked Questions </h1>
-	  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
-			<h3 class="panel-title">
-			  <a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-				What is Babywatch?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
-			<div class="panel-body px-3 mb-4">
-			  <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
-			  <ul>
-				<li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
-				<li>Scalability – pay for what you need today and add-on options as you grow.</li>
-				<li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
-				<li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
-			  </ul>
-			</div>
-		  </div>
-		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
-			<h3 class="panel-title">
-			  <a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-				Is this service paid?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-			<div class="panel-body px-3 mb-4">
-			  <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
-			</div>
-		  </div>
-		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
-			<h3 class="panel-title">
-			  <a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-				How is my child's information secure?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-			<div class="panel-body px-3 mb-4">
-			  <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
-			</div>
-		  </div>
-		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
-			<h3 class="panel-title">
-			  <a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-				Can Solodev CMS handle multiple websites for my company?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-			<div class="panel-body px-3 mb-4">
-			  <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-  
-  </div>
-
-	<footer class="footer">
-		<div class="container">
-			<div class="footer-content">
-				<div id="footer-left">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="home.htm">Home</a> </li>
-						<li><a href="#browse">Search</a></li>
-						<li><a href="About.html">About</a></li>
-					</ul>
-				</div>
-
-				<div id="footer-right">
-					<a href="https://www.facebook.com/The-BabyWatch-2313580118706339/?modal=admin_todo_tour" target="_blank"><img src="images/Facebook.png"></a>
-					<a href="https://www.instagram.com/the_baby_watch/" target="_blank"><img src="images/Instagram.png"></a>
-					<a href="https://twitter.com/BabyWatch4" target="_blank"><img src="images/Twitter.png"></a>
-				</div>
-			</div>
-
-			<div class="footer-content">
-				<p>&copy; Developed by Team 29 | ISTM 631 |<a href="https://www.tamu.edu/" target="_blank"><img id="tamu-logo" src="images/tamu_logo.png"></a></p>
-
-				<p>Icons made by <a href="https://www.freepik.com/" target="_blank" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
-					 target="_blank" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
-					 target="_blank" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
-
-			</div>
+		<div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+		<div class="panel-body px-3 mb-4">
+			<p>BabyWatch is a website that allows you to search for playdates. It was developed by four students from Mays Business School, Texas A&M University. Their vision is to help families connect with each other while they get their kids to socialize.</p>
 
 		</div>
-	</footer>
+		</div>
+	</div>
 
-</body>
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+			Is this service paid?
+			</a>
+		</h3>
+		</div>
+		<div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+		<div class="panel-body px-3 mb-4">
+			<p>Yes, absolutely! We do not charge a dime from the parents.</p>
+		</div>
+		</div>
+	</div>
 
-</html>
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+			Why should I undergo a Background check for using a website?
+			</a>
+		</h3>
+		</div>
+		<div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+		<div class="panel-body px-3 mb-4">
+			<p>This website allows parents to enter their kids information such as name, age, gender, etc. and even upload photographs. Also, all users are going to set up playdates for their kids using our service. While we strive to ensure that this data is secured, we also want to ensure that no user with a criminal background gets to access the website. This is why we do a background check on all our users to ensure the safety of families using our service.</p>
+		</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+			How will I know that the Background check is completed?
+			</a>
+		</h3>
+		</div>
+		<div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+		<div class="panel-body px-3 mb-4">
+			<p>You will receive an email from us with the results of your check. If your check is successful, you will then be able to login and enjoy full functionalities of our website. </p>
+		</div>
+		</div>
+	</div>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading4">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+			I cannot find my Zip Code. What should I do?
+			</a>
+		</h3>
+		</div>
+		<div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+		<div class="panel-body px-3 mb-4">
+			<p>We are greatful for your interest in our community. BabyWatch is currently only available for Brazos County, Texas. We are in the process of expanding and hope to extend our service to all counties in Texas soon.  </p>
+		</div>
+		</div>
+	</div>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading p-3 mb-3" role="tab" id="heading5">
+		<h3 class="panel-title">
+			<a style="color:black" class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="true" aria-controls="collapse5">
+			Whom should I contact in case of any queries/concerns?
+			</a>
+		</h3>
+		</div>
+		<div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+		<div class="panel-body px-3 mb-4">
+			<p>Below are the contact details of our company:
+                Address - 400 Bizzel Street, College Station, Texas
+                Phone Number - (123)-435-5647
+                Email ID - customer_service@babywatch.com</p>
+		</div>
+		</div>
+	</div>
+
+
+
+	</div>
+
+</div>
+
+{% endblock %}

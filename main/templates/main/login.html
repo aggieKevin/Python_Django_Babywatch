@@ -5,17 +5,17 @@
 {% endblock%}
 
 {% block body%}
-<div class="container", style="width:350px">
+<div class="container", style="max-width:350px">
     </br>
 <div class='card'>
-    <div class='card-header'><h2>You can log in here</h2>
-    <p>Not registered with us yet? <a href="/main/register/">Sign up</a> </p>  </div>
-    <div class='card-body'>
+    <div class='card-header'><h2 id="login-header">You can log in here</h2>
+    <p id="register-welcome-text">Not registered with us yet? <a href="/main/register/">Sign up</a> </p>  </div>
+    <div style="float:center;" class='card-body'>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <p><a href="/main/register/">Forgot your password?</a> </p>  
-        <button bype="submit">Login</button>
+        <p id="forgot-password"><a href="/main/register/">Forgot your password?</a> </p>
+        <div style="text-align:center;"><button id="login-submit-button" bype="submit">Login</button></div>
     </form>
     </div>
 </div>

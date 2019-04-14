@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Detail</title>
+{% endblock%}
+
+{% block body %}
+<h2>Household information </h2>
+{{house.id }} <br>
+{{house.household_name }} <br>
+{{house.address_line1 }} <br>
+{{house.address_line2 }} <br>
+{{house.city }} <br>
+{{house.email }} <br>
+
+<h2>Guardian Information</h2>
+{{ guard.first_name }} <br>
+{{guard.first_name }} <br>
+{{guard.last_name }} <br>
+{{guard.phone_number }} <br>
+{{guard.gender }} <br>
+{{guard.job_type }} <br>
+{{guard.company }} <br>
+{{guard.relationship }} <br>
+
+<h2>Child Information</h2>
+{{child.first_name }} <br>
+{{child.last_name }} <br>
+{{child.gender }} <br>
+{{child.hobby }} <br>
+{{child.allergy }} <br>
+
+<h3>give you comment here</h3>
+<form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <label for="{{ field.id_for_label }}" > {{ field.html_name }} </label>
+            <br>
+            {{ field }}
+        </div>
+        {% endfor %}
+        <br>
+        <button type="submit" class="button"> SUBMIT</button>
+</form>
+
+{% endblock %}

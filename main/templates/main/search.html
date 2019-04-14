@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Search</title>
+{% endblock%}
+
+{% block body %}
+<form method='GET' action=''>
+  <!--     <input type="radio" name="gender" value="M" checked> Male<br>
+        <input type="radio" name="gender" value="F"> Female<br>
+    
+        <input type="radio" name="city" value="college station" checked> College Station<br>
+        <input type="radio" name="city" value="houston"> Houston<br>
+        <input type="radio" name="city" value="austin"> Other
+
+        <select name="day">
+                <option value="M">Monday</option> 
+                <option value="T">Tuesday</option>
+                <option value="W">Wednesday</option>
+                <option value="R">Thursday</option>
+                <option value="F">Friday</option>
+                <option value="Sat">Saturday</option>
+                <option value="Sun">Sunday</option>
+            </select>
+--> 
+        <select name="city">
+                <option value="CS">College Station</option> 
+                <option value="Br">Bryan</option>
+                <option value="HOU">Houston</option>
+                <option value="Wa">Waco</option>
+                <option value="Au">Austin</option>
+        </select>
+    
+
+    
+        <input type='submit' value='Search'/>
+</form>
+
+{% for house,guard,child,rating in family_list %}
+    <h2>Household information </h2>
+    {{house.id }} <br>
+    {{house.household_name }} <br>
+ <!--  {{house.address_line1 }} <br>
+    {{house.address_line2 }} <br>
+    {{house.city }} <br>
+    {{house.email }} <br> --> 
+    <h2>Guardian Information</h2>
+    {{ guard.first_name }} <br>
+    {{guard.first_name }} <br>
+    {{guard.last_name }} <br>
+    {{guard.phone_number }} <br>
+<!--    {{guard.gender }} <br>
+    {{guard.job_type }} <br>
+    {{guard.company }} <br>
+    {{guard.relationship }} <br> --> 
+    <h2>Child Information</h2>
+    {{child.first_name }} <br>
+    {{child.last_name }} <br>
+    {{child.gender }} <br>
+    {{child.hobby }} <br>
+    {{child.allergy }} <br>
+    <h2>raing is {{ rating }}</h2>
+    <p><a href="{% url 'main:detail' house.id %}">More detail</a></p>
+        <br>
+        <br>
+    
+{% endfor %}
+
+
+{% endblock %}

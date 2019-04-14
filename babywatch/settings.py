@@ -25,7 +25,7 @@ SECRET_KEY = '5(io*e*$9=v3)#o)fu@2$yioif6!*=h@%(_i&o4u(#dx(p9y4h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['babywatch.pythonanywhere.com']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
@@ -73,14 +74,24 @@ WSGI_APPLICATION = 'babywatch.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+'''
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'babywatch$babywatch',
+        'USER': 'babywatch',
+        'PASSWORD': 'kevin123',
+        'HOST': 'babywatch.mysql.pythonanywhere-services.com',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -119,5 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT='/home/babywatch/babywatch/static/'
 
 LOGIN_REDIRECT_URL='/main/'

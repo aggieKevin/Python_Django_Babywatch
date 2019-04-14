@@ -1,18 +1,83 @@
 {% extends 'base.html'%}
 
+{% load static %}
+
+{% block head %}
+<title>Register</title>
+{% endblock%}
+
+
 {% block body%}
-<div class="container", style="width:400px">
-</br>
+<div class="container" style = "padding:30px">
     <div class='card'>
-            <div class='card-header'><h2>You can register here</h2></div>
+            <div class='card-header'><h2 style="text-align:center;">You can register here</h2></div>
             <div class='card-body'>
-                    <form method="post">
+                <form method="post">
                             {% csrf_token %}
                             {{form.as_p}}
-                            <button bype="submit">Submit</button>
-                        </form>
-            </div>     
+                    <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder="John"></input>
+                    </div>
+                    <div>
+                            <label>Middle Name</label>
+                            <input type="text" placeholder="M"></input>
+                    </div>
+                    <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Doe"></input>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress">Address Line 1</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputAddress2">Address Line 2</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <span class="note">   Format: 123-456-7890</span>
+                    </div>
+
+                    <div class = "form-row">
+                        <label for="idproof">Upload ID proof:</label>
+                        <p class="note"> Type:  SSN/Driving License /Passport</p>
+                        <input type="file" class="form-control">
+                    </div>
+                    <div class = "form-row">
+                            <label>ID Number</label>
+                            <input type="text" class="form-control"></input>
+                    </div>
+                    <div class = "form-row">
+
+                        <button bype="submit">Submit</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+            </div>
+
     </div>
-</br>
-</div>
+
 {%  endblock %}

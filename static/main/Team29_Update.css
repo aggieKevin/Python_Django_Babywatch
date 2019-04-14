@@ -1,0 +1,398 @@
+﻿.container-fluid {
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+.container {
+	width: 100%;
+	font-size: 1.25rem;
+	font-weight: 300;
+}
+
+img {
+	image-rendering: auto; /* to ensure smoothness and better resolution of images while changing viewport size */
+}
+
+h1 {
+	text-align: center;
+	display: block;
+	position: relative;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+h2 {
+
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+h4 {
+
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/*.para_search{
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:justify;
+	font-size:1.1rem";
+}*/
+header {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+#mascot-img {
+	padding: 10px;
+	padding-top: 0;
+	width: 10%;
+	height: auto;
+	margin-left:44%;
+	z-index: 3; /* setting z-index to 3 for the mascot image, to make sure it is always on top of the carousel images. Carousel images
+	have been set to z-index of 1 */
+	position: absolute;
+}
+
+#carousels {
+	z-index: 1;
+	margin-bottom: 2%;
+}
+
+.carousel-img {
+	width: 50%; /* assigned to shrink the image size to 50% of its original size */ 
+	height: auto;
+}
+
+.carousel {
+	display: inline-block;
+	width: 13%; /* To ensure the seven carousels are aligned horizontally in a single line */
+	height: auto;
+	margin: 0 auto;
+	text-align: right;
+	opacity: .7; /* opacity of carousel images set to 70% of their original image opacity. This makes them transparent enough to 
+	be contrasted nicely with the mascot  */
+	position: relative;
+}
+
+.carousel-inner {
+	margin-top: 0 auto;
+	height: auto;
+}
+
+/* Overriding the below class from Bootstrap 4 to align with our requirement. This handles the testimonials */
+.col-sm-4 {
+	text-align: center;
+}
+
+.col-sm-4 img {
+	margin: 10px;
+	width: 100%;
+	margin-top: 0 auto;
+	height: auto;
+}
+
+.captions {
+	font-size: 0.9rem;
+	font-style: italic;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.btn-pop-up{
+	float:right;
+	width:40%;
+	padding: 15px 32px;
+	border: 1px solid #000000;
+    border-radius: 25px;
+	
+	text-align:center;
+	background-color:#00CFF0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+	
+}
+.btn-pop-up:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  
+}
+.btn-pop-up-1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.btn-pop-up-1{
+	float:left-side;
+	width:40%;
+	padding: 15px 32px;
+	border: 1px solid #000000;
+    border-radius: 25px;
+	text-align:center;
+	background-color:#00CFF0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 7px 20px;
+    text-transform: uppercase;
+}
+
+#popupimg{
+	
+	text-align: center;
+	
+}	
+/* properties of image (BabyWatch icon) in the navigation bar */
+/*.img-left {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+*/
+/* Overriding the below class from Bootstrap 4 to align with our requirement. This handles the navigation bar */
+.navbar {
+	background-color: #ffcfda;
+}
+
+/* Overriding the below class from Bootstrap 4 to align with our requirement */
+.nav-link {
+	color: #454140;
+	font-size: 1.25rem;
+	font-weight: 300;
+	height: auto;
+}
+
+.nav-link:hover {
+	color: #00cff0; /* The color of the navigation links changes from grey to blue on hover. This brings contrast for better user
+	experience. Also, aligns with the color themes of the website */ 
+	font-weight: 600;
+}
+/* The footer of the website has some of the navigation links again, in case users need to go back to home page or search for something.
+In the footer we don't change the color to blue on hover, unlike in the top navigation bar. On hover functionality is not feasible for 
+mobile devices as there is no mouse. Footer also has links to our social media pages which is responsive for different device widths. We have also included 
+team name (author) information and cited references for the images or icons */
+footer {
+	background-color: #ffcfda;
+	color: black;
+	padding: 5px;
+	font-size: 1rem;
+	font-weight: 300;
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+#footer-left {
+	display: inline-block;
+	color: black;
+}
+
+#footer-left ul {
+	list-style: none;
+    padding-left: 0;
+}
+
+#footer-right {
+	float: right;
+}
+
+.footer-content {
+	display: block; /* block format ensures the different components of the footer do not overlap with each other */
+}
+
+footer a:hover {
+	color: black;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+footer a {
+	color: black;
+	font-size: 1rem;
+}
+
+footer img {
+	width: 30px;
+	height: 30px;
+	height: auto;
+	margin: 10px;
+}
+
+footer p {
+	margin-bottom: 0;
+	font-size: 0.8rem;
+}
+
+#tamu-logo {
+	width: 60px;
+	height: auto;
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 75%;
+}
+
+.container-small h4{
+    font-family: serif;
+}
+
+
+#Submit-button{
+	background-color: #00CFF0; 
+	border-color: white;
+	color: white;
+}
+#gender-form input{
+	background-color: white;
+
+}
+
+#gender-form{
+	font-family: sans-serif;
+}
+.dropdown-item{
+	background-color: white;
+}
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;  }
+
+
+#nav ul {
+	list-style: none;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0; }
+#nav li {
+	float: left;
+	width: 25%; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	font-size: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li:first-child a {
+	border-left: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+.row{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.img-circle{
+	width: 50%;
+}
+.form-group label,input{
+	display: inline-block;
+}
+
+#nav a:visited{
+	display: block;
+}
+
+#child, #pass, #contact, #preferences{
+	display: none;
+}
+
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+
+	#carousels {
+		display: none;
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	p.captions {
+		font-size: 0.7rem;
+		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	}
+
+/*	.img-left {
+		width: 30%;
+	}*/
+
+	#mascot-img {
+		display: block;
+		width: 30%;
+		margin: 0 auto;
+		height: auto;
+		position: relative;
+	}
+
+	/* Overriding the below class from Bootstrap 4 to align with our requirement. This class corresponds to the button icon (rounded square
+	outline) which is used to expand the navigation bar on mobile devices. Overriding the color code to 'firebrick' */
+	.custom-toggler.navbar-toggler {
+		border-color:#b22222;
+	}
+	
+	/* Overriding the below class from Bootstrap 4 to align with our requirement. This class corresponds to the button icon (3 horizontal 
+	lines) which is used to expand the navigation bar on mobile devices. Overriding the color code to 'firebrick' */
+	.custom-toggler .navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(178, 34, 34, 0.7)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
+
+	.col-sm-4 img {
+		width: 100%;
+		padding: 0 10%;
+		margin: 0 auto;
+		height: auto;
+	}
+
+	#footer-right img {
+		display: block; /* to stack the social media icons on top of another in the footer (in mobile devices) */
+	}
+	.aboutus-section {
+    padding: 10% 0;
+	}
+	.container{
+		padding: 10% 0;
+	}
+	#nav li {
+		float: left;
+		width: 50%; 
+	}
+
+}

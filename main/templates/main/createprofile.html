@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+<title>Babywatch_Registration</title>
+{% endblock%}
+
+{% block body%}
+
+<div class="container",style="max-width:450px">
+    <div class='logout-page-box'>
+        <div class='log-out-page-header'>
+        <h2>Flappy Welcomes You To the BabyWatch Community!</h2>
+        <img id="logout-img" src="{% static 'main/images/Flappy_pop_up.jpg' %}"></img>
+        <p id="logout-text">You have succesfully created an account. Please <a href="/main/login/">Login</a> to access the full features of BabyWatch.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

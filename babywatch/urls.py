@@ -18,7 +18,7 @@ from django.urls import path, include
 from babywatch import views as babywatch_views
 
 urlpatterns = [
-    #path('',babywatch_views.home,name='home page'),
+    path('',babywatch_views.home,name='home page'),
     path('main/',include('main.urls')),
     path('admin/', admin.site.urls),
 ]
